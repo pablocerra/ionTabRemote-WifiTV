@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BA6357D825ED63F27D9F5F8 /* Pods_ionTabRemote_WifiTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8523F6EADDFC378E1A06C93 /* Pods_ionTabRemote_WifiTV.framework */; };
 		C95AAC6426974A1300A08A43 /* credencialesObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6326974A1300A08A43 /* credencialesObj.swift */; };
 		C95AAC6726974C7700A08A43 /* token.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6626974C7700A08A43 /* token.swift */; };
 		C95AAC6926974E2D00A08A43 /* communicationsServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6826974E2D00A08A43 /* communicationsServer.swift */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7309CDD40CDB60ADA9C3720A /* Pods-ionTabRemote-WifiTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ionTabRemote-WifiTV.release.xcconfig"; path = "Target Support Files/Pods-ionTabRemote-WifiTV/Pods-ionTabRemote-WifiTV.release.xcconfig"; sourceTree = "<group>"; };
+		A8523F6EADDFC378E1A06C93 /* Pods_ionTabRemote_WifiTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ionTabRemote_WifiTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2A3B070AE6BBC48BC5E2DE /* Pods-ionTabRemote-WifiTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ionTabRemote-WifiTV.debug.xcconfig"; path = "Target Support Files/Pods-ionTabRemote-WifiTV/Pods-ionTabRemote-WifiTV.debug.xcconfig"; sourceTree = "<group>"; };
 		C95AAC6326974A1300A08A43 /* credencialesObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = credencialesObj.swift; sourceTree = "<group>"; };
 		C95AAC6626974C7700A08A43 /* token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = token.swift; sourceTree = "<group>"; };
 		C95AAC6826974E2D00A08A43 /* communicationsServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = communicationsServer.swift; sourceTree = "<group>"; };
@@ -41,12 +45,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA6357D825ED63F27D9F5F8 /* Pods_ionTabRemote_WifiTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0400E7D59BF88BEA4189ADD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC2A3B070AE6BBC48BC5E2DE /* Pods-ionTabRemote-WifiTV.debug.xcconfig */,
+				7309CDD40CDB60ADA9C3720A /* Pods-ionTabRemote-WifiTV.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4BDD7AA93A77A230AB585E58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8523F6EADDFC378E1A06C93 /* Pods_ionTabRemote_WifiTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C95AAC6526974C5C00A08A43 /* logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +87,8 @@
 			children = (
 				C9C849C8269656A10094D522 /* ionTabRemote-WifiTV */,
 				C9C849C7269656A10094D522 /* Products */,
+				0400E7D59BF88BEA4189ADD1 /* Pods */,
+				4BDD7AA93A77A230AB585E58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +122,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9C849DA269656A30094D522 /* Build configuration list for PBXNativeTarget "ionTabRemote-WifiTV" */;
 			buildPhases = (
+				3BA4CBEC1DA9326E37F32C97 /* [CP] Check Pods Manifest.lock */,
 				C9C849C2269656A10094D522 /* Sources */,
 				C9C849C3269656A10094D522 /* Frameworks */,
 				C9C849C4269656A10094D522 /* Resources */,
@@ -154,6 +180,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BA4CBEC1DA9326E37F32C97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ionTabRemote-WifiTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9C849C2269656A10094D522 /* Sources */ = {
@@ -311,6 +362,7 @@
 		};
 		C9C849DB269656A30094D522 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2A3B070AE6BBC48BC5E2DE /* Pods-ionTabRemote-WifiTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,6 +382,7 @@
 		};
 		C9C849DC269656A30094D522 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7309CDD40CDB60ADA9C3720A /* Pods-ionTabRemote-WifiTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,6 @@
+framework module Pods_ionTabRemote_WifiTV {
+  umbrella header "Pods-ionTabRemote-WifiTV-umbrella.h"
+
+  export *
+  module * { export * }
+}
