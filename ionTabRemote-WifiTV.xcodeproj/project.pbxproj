@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C95AAC6426974A1300A08A43 /* credencialesObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6326974A1300A08A43 /* credencialesObj.swift */; };
+		C95AAC6726974C7700A08A43 /* token.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6626974C7700A08A43 /* token.swift */; };
+		C95AAC6926974E2D00A08A43 /* communicationsServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6826974E2D00A08A43 /* communicationsServer.swift */; };
+		C95AAC6B26974E8100A08A43 /* configTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6A26974E8100A08A43 /* configTV.swift */; };
+		C9C05A48269C1B9E001ACADD /* peripheralCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C05A47269C1B9E001ACADD /* peripheralCustom.swift */; };
+		C9C849CA269656A10094D522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C849C9269656A10094D522 /* AppDelegate.swift */; };
+		C9C849CC269656A10094D522 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C849CB269656A10094D522 /* SceneDelegate.swift */; };
+		C9C849CE269656A10094D522 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C849CD269656A10094D522 /* ViewController.swift */; };
+		C9C849D1269656A10094D522 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C849CF269656A10094D522 /* Main.storyboard */; };
+		C9C849D6269656A30094D522 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C849D4269656A30094D522 /* LaunchScreen.storyboard */; };
+		C9C84A0026965DA80094D522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C849D2269656A30094D522 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C95AAC6326974A1300A08A43 /* credencialesObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = credencialesObj.swift; sourceTree = "<group>"; };
+		C95AAC6626974C7700A08A43 /* token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = token.swift; sourceTree = "<group>"; };
+		C95AAC6826974E2D00A08A43 /* communicationsServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = communicationsServer.swift; sourceTree = "<group>"; };
+		C95AAC6A26974E8100A08A43 /* configTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configTV.swift; sourceTree = "<group>"; };
+		C9C05A47269C1B9E001ACADD /* peripheralCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peripheralCustom.swift; sourceTree = "<group>"; };
+		C9C849C6269656A10094D522 /* ionTabRemote-WifiTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ionTabRemote-WifiTV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C849C9269656A10094D522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9C849CB269656A10094D522 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C9C849CD269656A10094D522 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9C849D0269656A10094D522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9C849D2269656A30094D522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9C849D5269656A30094D522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9C849D7269656A30094D522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9C849C3269656A10094D522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C95AAC6526974C5C00A08A43 /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				C95AAC6326974A1300A08A43 /* credencialesObj.swift */,
+				C95AAC6626974C7700A08A43 /* token.swift */,
+				C95AAC6826974E2D00A08A43 /* communicationsServer.swift */,
+				C95AAC6A26974E8100A08A43 /* configTV.swift */,
+				C9C05A47269C1B9E001ACADD /* peripheralCustom.swift */,
+			);
+			path = logic;
+			sourceTree = "<group>";
+		};
+		C9C849BD269656A10094D522 = {
+			isa = PBXGroup;
+			children = (
+				C9C849C8269656A10094D522 /* ionTabRemote-WifiTV */,
+				C9C849C7269656A10094D522 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9C849C7269656A10094D522 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9C849C6269656A10094D522 /* ionTabRemote-WifiTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9C849C8269656A10094D522 /* ionTabRemote-WifiTV */ = {
+			isa = PBXGroup;
+			children = (
+				C95AAC6526974C5C00A08A43 /* logic */,
+				C9C849C9269656A10094D522 /* AppDelegate.swift */,
+				C9C849CB269656A10094D522 /* SceneDelegate.swift */,
+				C9C849CD269656A10094D522 /* ViewController.swift */,
+				C9C849CF269656A10094D522 /* Main.storyboard */,
+				C9C849D2269656A30094D522 /* Assets.xcassets */,
+				C9C849D4269656A30094D522 /* LaunchScreen.storyboard */,
+				C9C849D7269656A30094D522 /* Info.plist */,
+			);
+			path = "ionTabRemote-WifiTV";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9C849C5269656A10094D522 /* ionTabRemote-WifiTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C849DA269656A30094D522 /* Build configuration list for PBXNativeTarget "ionTabRemote-WifiTV" */;
+			buildPhases = (
+				C9C849C2269656A10094D522 /* Sources */,
+				C9C849C3269656A10094D522 /* Frameworks */,
+				C9C849C4269656A10094D522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ionTabRemote-WifiTV";
+			productName = "ionTabRemote-WifiTV";
+			productReference = C9C849C6269656A10094D522 /* ionTabRemote-WifiTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9C849BE269656A10094D522 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C9C849C5269656A10094D522 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = C9C849C1269656A10094D522 /* Build configuration list for PBXProject "ionTabRemote-WifiTV" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9C849BD269656A10094D522;
+			productRefGroup = C9C849C7269656A10094D522 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9C849C5269656A10094D522 /* ionTabRemote-WifiTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9C849C4269656A10094D522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C849D6269656A30094D522 /* LaunchScreen.storyboard in Resources */,
+				C9C84A0026965DA80094D522 /* Assets.xcassets in Resources */,
+				C9C849D1269656A10094D522 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9C849C2269656A10094D522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C95AAC6726974C7700A08A43 /* token.swift in Sources */,
+				C9C849CE269656A10094D522 /* ViewController.swift in Sources */,
+				C95AAC6426974A1300A08A43 /* credencialesObj.swift in Sources */,
+				C9C849CA269656A10094D522 /* AppDelegate.swift in Sources */,
+				C9C849CC269656A10094D522 /* SceneDelegate.swift in Sources */,
+				C95AAC6926974E2D00A08A43 /* communicationsServer.swift in Sources */,
+				C95AAC6B26974E8100A08A43 /* configTV.swift in Sources */,
+				C9C05A48269C1B9E001ACADD /* peripheralCustom.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C9C849CF269656A10094D522 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C849D0269656A10094D522 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9C849D4269656A30094D522 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C849D5269656A30094D522 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9C849D8269656A30094D522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9C849D9269656A30094D522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9C849DB269656A30094D522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X58TJTJCNA;
+				INFOPLIST_FILE = "ionTabRemote-WifiTV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "es.ionide.ionTabRemote-WifiTV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9C849DC269656A30094D522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X58TJTJCNA;
+				INFOPLIST_FILE = "ionTabRemote-WifiTV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "es.ionide.ionTabRemote-WifiTV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9C849C1269656A10094D522 /* Build configuration list for PBXProject "ionTabRemote-WifiTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C849D8269656A30094D522 /* Debug */,
+				C9C849D9269656A30094D522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C849DA269656A30094D522 /* Build configuration list for PBXNativeTarget "ionTabRemote-WifiTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C849DB269656A30094D522 /* Debug */,
+				C9C849DC269656A30094D522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9C849BE269656A10094D522 /* Project object */;
+}
