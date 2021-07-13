@@ -16,12 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mando_nuevo" id="dXf-9X-q2Y">
-                                <rect key="frame" x="219.14818859057914" y="192.02052912935505" width="379.00000000000023" height="798.00000000000011"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3i-y8-BqY">
+                                <rect key="frame" x="0.0" y="0.0" width="820" height="50"/>
+                                <items>
+                                    <navigationItem title="Mando" id="ozC-Hs-32n"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mando_nuevo" translatesAutoresizingMaskIntoConstraints="NO" id="L3g-7X-ud7">
+                                <rect key="frame" x="-118" y="312" width="589" height="484"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jge-UD-tKU">
-                                <rect key="frame" x="480.14818859057914" y="628.02052912935505" width="32.000000000000398" height="30.000000000000057"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jge-UD-tKU">
+                                <rect key="frame" x="246" y="610" width="32.000000000000398" height="30.000000000000057"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" image="plus" catalog="system"/>
@@ -29,8 +35,8 @@
                                     <action selector="upchanelAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhg-rs-gi4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ys-CO-xI1">
-                                <rect key="frame" x="487.14818859057891" y="736.02052912935528" width="18.000000000000426" height="21.999999999999943"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ys-CO-xI1">
+                                <rect key="frame" x="253" y="718" width="18.000000000000426" height="21.999999999999943"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" image="minus" catalog="system"/>
@@ -38,8 +44,8 @@
                                     <action selector="dowchanelAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACc-SI-Xo4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLz-yK-0Fg">
-                                <rect key="frame" x="323.14818859057891" y="736.02052912935528" width="17.999999999999986" height="21.999999999999943"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLz-yK-0Fg">
+                                <rect key="frame" x="89" y="718" width="17.999999999999986" height="21.999999999999943"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" image="minus" catalog="system"/>
@@ -47,8 +53,8 @@
                                     <action selector="dowVolAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFW-dZ-h9e"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyN-cf-UD1">
-                                <rect key="frame" x="467.14818859057914" y="390.02052912935483" width="58.000000000000213" height="52.000000000000171"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyN-cf-UD1">
+                                <rect key="frame" x="233" y="372" width="58.000000000000213" height="52.000000000000171"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <color key="tintColor" systemColor="opaqueSeparatorColor"/>
@@ -57,8 +63,8 @@
                                     <action selector="muteAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIr-hA-Iuy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-TD-CkH">
-                                <rect key="frame" x="289.14818859057937" y="624.02052912935505" width="78.999999999999716" height="29.000000000000114"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-TD-CkH">
+                                <rect key="frame" x="55" y="606" width="78.999999999999716" height="29.000000000000114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" image="plus" catalog="system"/>
@@ -66,36 +72,37 @@
                                     <action selector="upVolAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mM-lX-b8T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhf-sJ-lXJ">
-                                <rect key="frame" x="295" y="379" width="66.000000000000028" height="73"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGb-wW-L0O" userLabel="Power Button">
+                                <rect key="frame" x="78" y="369" width="61" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="power" catalog="system">
-                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
-                                    <color key="titleShadowColor" systemColor="secondarySystemBackgroundColor"/>
-                                </state>
+                                <state key="normal" image="power" catalog="system"/>
                                 <connections>
-                                    <action selector="powerAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKH-ua-Hej"/>
+                                    <action selector="powerAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Trt-LA-qY8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="W3i-y8-BqY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BCb-TT-dgQ"/>
+                            <constraint firstItem="W3i-y8-BqY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lRK-c9-Fhd"/>
+                            <constraint firstItem="W3i-y8-BqY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pSe-FR-AiY"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="PowerButton" destination="fGb-wW-L0O" id="0fI-b9-id6"/>
                         <outlet property="chanelDownButton" destination="9ys-CO-xI1" id="09q-8z-IyU"/>
                         <outlet property="chanelUpButton" destination="jge-UD-tKU" id="2Nj-ye-uO7"/>
                         <outlet property="muteButton" destination="ZyN-cf-UD1" id="Wcs-Cz-4Mx"/>
-                        <outlet property="powerButton" destination="xhf-sJ-lXJ" id="2v9-Hq-xsF"/>
                         <outlet property="volumUpButton" destination="PSk-TD-CkH" id="sOE-w1-reh"/>
                         <outlet property="volumeDownButton" destination="DLz-yK-0Fg" id="axU-5G-OY9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.882812499999996" y="88.726207906295741"/>
+            <point key="canvasLocation" x="29.26829268292683" y="88.47457627118645"/>
         </scene>
     </scenes>
     <resources>
@@ -107,9 +114,6 @@
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -119,8 +123,8 @@
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

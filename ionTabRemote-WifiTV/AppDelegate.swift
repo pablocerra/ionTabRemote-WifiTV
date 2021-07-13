@@ -17,15 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        antes de inicar la app creo el objeto con las credenciales, creo el token y hago las peticiones necesarias para conseguir los parametros
         
-        let credenciales = credenciales()
-        let token = token()
-        token.credencialesO=credenciales
-        
-        let resultadoPeticionPost = communicationsServer.postLogin(username: credenciales.username, password: credenciales.password, mac: credenciales.mac, bundleId: "es.ionide.WifiTV", version: "0.0.1", url: credenciales.url_api, tokenO: token)
-        
-        if resultadoPeticionPost {
-            //        var confitv:configTV = communicationsServer.get(operation: "/config/remote_wifitv", token: token)
-        }
+//        let credenciales = credenciales()
+//        let token = token()
+//        token.credencialesO=credenciales
+//        
+//        let resultadoPeticionPost = communicationsServer.postLogin(username: credenciales.username, password: credenciales.password, mac: credenciales.mac, bundleId: "es.ionide.WifiTV", version: "0.0.1", url: credenciales.url_api, tokenO: token)
+//        
+//        if resultadoPeticionPost {
+//            //        var confitv:configTV = communicationsServer.get(operation: "/config/remote_wifitv", token: token)
+//        }
         
         
         return true

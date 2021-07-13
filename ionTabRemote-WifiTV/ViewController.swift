@@ -12,7 +12,8 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
    
     
     
-    @IBOutlet weak var powerButton: UIButton!
+
+    @IBOutlet weak var PowerButton: UIButton!
     @IBOutlet weak var chanelUpButton: UIButton!
     @IBOutlet weak var chanelDownButton: UIButton!
     @IBOutlet weak var volumeDownButton: UIButton!
@@ -26,7 +27,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     private var centralManager: CBCentralManager!
     private var peripheral: CBPeripheral!
     
-    
+
     
     public var VOLUME_UP:CBCharacteristic?
     public var VOLUME_DW:CBCharacteristic?
@@ -45,7 +46,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
         if appDelegate.configtv.ble_name != "" || appDelegate.configtv.ble_token != "" {
             configuracionTV  = appDelegate.configtv
             
-            mandoUID = CBUUID.init(string: configuracionTV.ble_name)
+ 
             
             centralManager = CBCentralManager(delegate: self, queue: nil)
             centralManager.scanForPeripherals(withServices: nil)
@@ -73,7 +74,10 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
             print("Central is not powered on")
         } else {
           print("Central scanning");
-          centralManager.scanForPeripherals(withServices: [mandoUID], options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
+        centralManager.scanForPeripherals(withServices: nil)
+//        centralManager.scanForPeripherals(withServices: [mandoUID], options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
+            
+            
         }
     }
 
@@ -81,26 +85,50 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
 
-        // Dejo de escanear al encontrar el dispositivo.
-        self.centralManager.stopScan()
+//        // Dejo de escanear al encontrar el dispositivo.
+//        self.centralManager.stopScan()
+//
+//        // Copi las credenciales.
+//        self.peripheral = peripheral
+//        self.peripheral.delegate = self
+//
+//        //mandoUID = CBUUID.init(string: configuracionTV.ble_name)
+//        //"LE_WH-XB900N"
+//
+//
+//        // COnectado!
+//        self.centralManager.connect(self.peripheral, options: nil)
 
-        // Copi las credenciales.
-        self.peripheral = peripheral
-        self.peripheral.delegate = self
-
-        // COnectado!
-        self.centralManager.connect(self.peripheral, options: nil)
+//     print(peripheral)
         
         
-
+        if peripheral.name == configuracionTV.ble_name {
+            
+            mandoUID = CBUUID.init(string: peripheral.identifier.uuidString)
+            
+            self.centralManager.stopScan()
+            self.peripheral = peripheral
+            self.peripheral.delegate = self
+            
+            self.centralManager.connect(self.peripheral, options: nil)
+            print(peripheral.identifier, " conectado ")
         }
+       
+        let localName = peripheral.name
+        print("\(String(describing: localName))" )
+        print(peripheral.identifier)
+
+                
+        
+    }
     
     // cuando el se conecta al dispositivo se lanza este metodo.
     
         func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
                if peripheral == self.peripheral {
                    print("Connected to your Particle Board")
-                   peripheral.discoverServices([mandoUID])
+                    
+                    peripheral.discoverServices([mandoUID])
                }
            }
     
@@ -133,31 +161,37 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
                     if characteristic.uuid == peripheralCustom.VOLUME_UP {
                         
                         print("subir volumen fuciona")
+                        chanelUpButton.isEnabled = true
                         VOLUME_UP = characteristic
                         
                     } else if characteristic.uuid == peripheralCustom.VOLUME_DW {
                         
                         print("bajar volumen funciona")
+                        volumeDownButton.isEnabled = true
                         VOLUME_DW = characteristic
                         
                     } else if characteristic.uuid == peripheralCustom.CHANNEL_DW {
                         
                         print("bajar de canal funciona");
+                        chanelDownButton.isEnabled = true
                         CHANNEL_DW = characteristic
                         
                     }else if characteristic.uuid == peripheralCustom.CHANNEL_UP {
                         
                         print("subir de canal funciona");
+                        chanelUpButton.isEnabled = true
                         CHANNEL_UP = characteristic
                         
                     }else if characteristic.uuid == peripheralCustom.POWER {
                         
                         print("encender funciona");
+                        PowerButton.isEnabled = true
                         POWER = characteristic
                         
                     }else if characteristic.uuid == peripheralCustom.MUTE{
                         
                         print("siliencar funciona");
+                        muteButton.isEnabled = true
                         MUTE = characteristic
                         
                     }
@@ -170,8 +204,14 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
                 // Check if it has the write property
                 if characteristic.properties.contains(.writeWithoutResponse) && peripheral != nil {
 
-                    peripheral.writeValue(value, for: characteristic, type: .withoutResponse)
+                    //peripheral.writeValue(value, for: characteristic, type: .withoutResponse)
+                    
+                    
+                    
+                    //let data = NSData(bytes: value, length: 1)
 
+                    peripheral.writeValue(value, for: characteristic, type: .withResponse)
+                    
                 }
 
         
@@ -179,39 +219,38 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     
     @IBAction func powerAccion(_ sender: Any) {
         
-//        let data = peripheralCustom.POWER.data(using: String.Encoding.utf8) as! String
-//        senAccionToRemote(withCharacteristic: POWER!, withValue: peripheralCustom.POWER )
+        senAccionToRemote(withCharacteristic: POWER!, withValue: peripheralCustom.POWER.data )
         
     }
     
     @IBAction func muteAccion(_ sender: Any) {
         
-
+        senAccionToRemote(withCharacteristic: MUTE!, withValue: peripheralCustom.MUTE.data )
         
     }
     
     @IBAction func upVolAccion(_ sender: Any) {
       
-        
+        senAccionToRemote(withCharacteristic: VOLUME_DW!, withValue: peripheralCustom.VOLUME_DW.data )
           
     }
     
     @IBAction func dowVolAccion(_ sender: Any) {
         
         
-        
+        senAccionToRemote(withCharacteristic: VOLUME_UP!, withValue: peripheralCustom.VOLUME_UP.data )
     }
     
     @IBAction func upchanelAccion(_ sender: Any) {
         
-        
+        senAccionToRemote(withCharacteristic: CHANNEL_UP!, withValue: peripheralCustom.CHANNEL_UP.data )
         
     }
     
     @IBAction func dowchanelAccion(_ sender: Any) {
         
         
-        
+        senAccionToRemote(withCharacteristic: CHANNEL_DW!, withValue: peripheralCustom.CHANNEL_DW.data )
     }
 }
 
