@@ -137,48 +137,14 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
                 print("Characteristicsssss", characteristics)
                 for characteristic in characteristics {
                     print("Characteristic", characteristic)
-                    //if self.ch == nil {
-                        self.ch = characteristic
-                    //}
-
-                    /*
-                    if characteristic.uuid == peripheralCustom.VOLUME_UP {
-                        
-                        print("subir volumen fuciona")
-//                        chanelUpButton.isEnabled = true
-                        VOLUME_UP = characteristic
-                        
-                    } else if characteristic.uuid == peripheralCustom.VOLUME_DW {
-                        
-                        print("bajar volumen funciona")
-//                        volumeDownButton.isEnabled = true
-                        VOLUME_DW = characteristic
-                        
-                    } else if characteristic.uuid == peripheralCustom.CHANNEL_DW {
-                        
-                        print("bajar de canal funciona");
-//                        chanelDownButton.isEnabled = true
-                        CHANNEL_DW = characteristic
-                        
-                    }else if characteristic.uuid == peripheralCustom.CHANNEL_UP {
-                        
-                        print("subir de canal funciona");
-//                        chanelUpButton.isEnabled = true
-                        CHANNEL_UP = characteristic
-                        
-                    }else if characteristic.uuid == peripheralCustom.POWER {
-                        
-                        print("encender funciona");
-//                        PowerButton.isEnabled = true
-                        POWER = characteristic
-                        
-                    }else if characteristic.uuid == peripheralCustom.MUTE{
-                        
-                        print("siliencar funciona");
-//                        muteButton.isEnabled = true
-                        MUTE = characteristic
-                        
-                    }*/
+                   
+                    
+                    self.ch = characteristic
+                    
+                    var parameter = "12345678"
+                    let data = NSData(bytes: &parameter, length: parameter.count)
+                    self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
+                    
                 }
             }
         }
@@ -210,7 +176,11 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     
     @IBAction func powerAccion(_ sender: Any) {
         
-        senAccionToRemote(withCharacteristic: POWER!, withValue: peripheralCustom.POWER.data )
+//        senAccionToRemote(withCharacteristic: POWER!, withValue: peripheralCustom.POWER.data )
+        
+        let parameter = [0xFE, 0x68, 0x97]
+        let data = NSData(bytes: parameter, length: parameter.count)
+        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
         
     }
     
@@ -223,8 +193,8 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     @IBAction func upVolAccion(_ sender: Any) {
       print("Vol up")
         //senAccionToRemote(withCharacteristic: VOLUME_DW!, withValue: peripheralCustom.VOLUME_DW.data )
-        var parameter = 0xFED827
-        let data = NSData(bytes: &parameter, length: 3)
+        let parameter = [0xFE, 0xD8, 0x27] // 0xFED827
+        let data = NSData(bytes: parameter, length: parameter.count)
         self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
     }
     

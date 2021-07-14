@@ -26,7 +26,7 @@ class configTV {
     
     init(){
         
-        self.ble_token  = "12334465778"
+        self.ble_token  = "12345678"
         self.ble_name = "WIFITV1234"//"WIFITV616"//"b4250400-fb4b-4746-b2b0-93f0e61122c6" WIFITV616
         
     }

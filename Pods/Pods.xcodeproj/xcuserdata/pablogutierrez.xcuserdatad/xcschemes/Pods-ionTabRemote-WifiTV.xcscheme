@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9331CA2D38B48CEEA8B4CE65A8A572A3"
-               BuildableName = "Pods-ionTabRemote-WifiTV.framework"
+               BuildableName = "Pods_ionTabRemote_WifiTV.framework"
                BlueprintName = "Pods-ionTabRemote-WifiTV"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
