@@ -178,7 +178,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
         
 //        senAccionToRemote(withCharacteristic: POWER!, withValue: peripheralCustom.POWER.data )
         
-        let parameter = [0xFE, 0x68, 0x97]
+        let parameter = [0xFE, 0xA8, 0x57]
         let data = NSData(bytes: parameter, length: parameter.count)
         self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
         
@@ -186,7 +186,9 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     
     @IBAction func muteAccion(_ sender: Any) {
         
-        senAccionToRemote(withCharacteristic: MUTE!, withValue: peripheralCustom.MUTE.data )
+        let parameter = [0xFE, 0x68, 0x97]
+        let data = NSData(bytes: parameter, length: parameter.count)
+        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
         
     }
     
@@ -200,20 +202,26 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     
     @IBAction func dowVolAccion(_ sender: Any) {
         
+        let parameter = [0xFE, 0x58, 0xA7]
+        let data = NSData(bytes: parameter, length: parameter.count)
+        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
         
-        senAccionToRemote(withCharacteristic: VOLUME_UP!, withValue: peripheralCustom.VOLUME_UP.data )
     }
     
     @IBAction func upchanelAccion(_ sender: Any) {
         
-        senAccionToRemote(withCharacteristic: CHANNEL_UP!, withValue: peripheralCustom.CHANNEL_UP.data )
+        let parameter = [0xFE, 0x98, 0x67]
+        let data = NSData(bytes: parameter, length: parameter.count)
+        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
         
     }
     
     @IBAction func dowchanelAccion(_ sender: Any) {
         
+        let parameter = [0xFE, 0x18, 0xE7]
+        let data = NSData(bytes: parameter, length: parameter.count)
+        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
         
-        senAccionToRemote(withCharacteristic: CHANNEL_DW!, withValue: peripheralCustom.CHANNEL_DW.data )
     }
 }
 
