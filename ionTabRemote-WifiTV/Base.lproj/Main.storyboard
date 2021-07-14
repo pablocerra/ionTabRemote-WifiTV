@@ -16,18 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3i-y8-BqY">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W3i-y8-BqY">
                                 <rect key="frame" x="0.0" y="0.0" width="820" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Mando" id="ozC-Hs-32n"/>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mando_nuevo" translatesAutoresizingMaskIntoConstraints="NO" id="L3g-7X-ud7">
-                                <rect key="frame" x="-118" y="312" width="589" height="484"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mando_nuevo" translatesAutoresizingMaskIntoConstraints="NO" id="uUS-c3-7VD">
+                                <rect key="frame" x="20" y="411" width="284" height="415"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jge-UD-tKU">
-                                <rect key="frame" x="246" y="610" width="32.000000000000398" height="30.000000000000057"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jge-UD-tKU">
+                                <rect key="frame" x="207" y="638" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" image="plus" catalog="system"/>
@@ -35,8 +36,8 @@
                                     <action selector="upchanelAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhg-rs-gi4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ys-CO-xI1">
-                                <rect key="frame" x="253" y="718" width="18.000000000000426" height="21.999999999999943"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ys-CO-xI1">
+                                <rect key="frame" x="207" y="723" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" image="minus" catalog="system"/>
@@ -44,8 +45,8 @@
                                     <action selector="dowchanelAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACc-SI-Xo4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLz-yK-0Fg">
-                                <rect key="frame" x="89" y="718" width="17.999999999999986" height="21.999999999999943"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLz-yK-0Fg">
+                                <rect key="frame" x="84" y="723" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" image="minus" catalog="system"/>
@@ -53,8 +54,8 @@
                                     <action selector="dowVolAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFW-dZ-h9e"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyN-cf-UD1">
-                                <rect key="frame" x="233" y="372" width="58.000000000000213" height="52.000000000000171"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyN-cf-UD1">
+                                <rect key="frame" x="197" y="461" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <color key="tintColor" systemColor="opaqueSeparatorColor"/>
@@ -63,8 +64,8 @@
                                     <action selector="muteAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIr-hA-Iuy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-TD-CkH">
-                                <rect key="frame" x="55" y="606" width="78.999999999999716" height="29.000000000000114"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-TD-CkH">
+                                <rect key="frame" x="84" y="638" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" image="plus" catalog="system"/>
@@ -72,8 +73,8 @@
                                     <action selector="upVolAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mM-lX-b8T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGb-wW-L0O" userLabel="Power Button">
-                                <rect key="frame" x="78" y="369" width="61" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGb-wW-L0O" userLabel="Power Button">
+                                <rect key="frame" x="74" y="461" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -85,11 +86,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
-                        <constraints>
-                            <constraint firstItem="W3i-y8-BqY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BCb-TT-dgQ"/>
-                            <constraint firstItem="W3i-y8-BqY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lRK-c9-Fhd"/>
-                            <constraint firstItem="W3i-y8-BqY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pSe-FR-AiY"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="PowerButton" destination="fGb-wW-L0O" id="0fI-b9-id6"/>
