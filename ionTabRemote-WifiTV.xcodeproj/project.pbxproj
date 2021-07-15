@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BA6357D825ED63F27D9F5F8 /* Pods_ionTabRemote_WifiTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8523F6EADDFC378E1A06C93 /* Pods_ionTabRemote_WifiTV.framework */; };
+		C926C22D26A0503000CF7095 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926C22C26A0503000CF7095 /* UIButtonExtension.swift */; };
 		C95AAC6426974A1300A08A43 /* credencialesObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6326974A1300A08A43 /* credencialesObj.swift */; };
 		C95AAC6726974C7700A08A43 /* token.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6626974C7700A08A43 /* token.swift */; };
 		C95AAC6926974E2D00A08A43 /* communicationsServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AAC6826974E2D00A08A43 /* communicationsServer.swift */; };
@@ -25,6 +26,7 @@
 		7309CDD40CDB60ADA9C3720A /* Pods-ionTabRemote-WifiTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ionTabRemote-WifiTV.release.xcconfig"; path = "Target Support Files/Pods-ionTabRemote-WifiTV/Pods-ionTabRemote-WifiTV.release.xcconfig"; sourceTree = "<group>"; };
 		A8523F6EADDFC378E1A06C93 /* Pods_ionTabRemote_WifiTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ionTabRemote_WifiTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2A3B070AE6BBC48BC5E2DE /* Pods-ionTabRemote-WifiTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ionTabRemote-WifiTV.debug.xcconfig"; path = "Target Support Files/Pods-ionTabRemote-WifiTV/Pods-ionTabRemote-WifiTV.debug.xcconfig"; sourceTree = "<group>"; };
+		C926C22C26A0503000CF7095 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		C95AAC6326974A1300A08A43 /* credencialesObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = credencialesObj.swift; sourceTree = "<group>"; };
 		C95AAC6626974C7700A08A43 /* token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = token.swift; sourceTree = "<group>"; };
 		C95AAC6826974E2D00A08A43 /* communicationsServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = communicationsServer.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C926C22926A04FF400CF7095 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				C926C22C26A0503000CF7095 /* UIButtonExtension.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		C95AAC6526974C5C00A08A43 /* logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		C9C849C8269656A10094D522 /* ionTabRemote-WifiTV */ = {
 			isa = PBXGroup;
 			children = (
+				C926C22926A04FF400CF7095 /* util */,
 				C95AAC6526974C5C00A08A43 /* logic */,
 				C9C849C9269656A10094D522 /* AppDelegate.swift */,
 				C9C849CB269656A10094D522 /* SceneDelegate.swift */,
@@ -215,6 +226,7 @@
 				C95AAC6426974A1300A08A43 /* credencialesObj.swift in Sources */,
 				C9C849CA269656A10094D522 /* AppDelegate.swift in Sources */,
 				C9C849CC269656A10094D522 /* SceneDelegate.swift in Sources */,
+				C926C22D26A0503000CF7095 /* UIButtonExtension.swift in Sources */,
 				C95AAC6926974E2D00A08A43 /* communicationsServer.swift in Sources */,
 				C95AAC6B26974E8100A08A43 /* configTV.swift in Sources */,
 				C9C05A48269C1B9E001ACADD /* peripheralCustom.swift in Sources */,

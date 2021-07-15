@@ -44,10 +44,15 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
-            configuracionTV  = appDelegate.configtv
-
-            centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
+        PowerButton.round()
+        chanelUpButton.roundUPButton()
+        chanelDownButton.roundDowButton()
+        volumeDownButton.roundDowButton()
+        muteButton.round()
+        volumUpButton.roundUPButton()
+        
+        configuracionTV  = appDelegate.configtv
+        centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
 
     }
      
