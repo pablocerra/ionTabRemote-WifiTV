@@ -114,13 +114,6 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
                 for service in services {
                     print("service found")
                     //Now kick off discovery of characteristics
-                    /*
-                    peripheral.discoverCharacteristics([peripheralCustom.VOLUME_UP,
-                                                        peripheralCustom.VOLUME_DW,
-                                                        peripheralCustom.CHANNEL_UP,
-                                                        peripheralCustom.CHANNEL_DW,
-                                                        peripheralCustom.MUTE,
-                                                        peripheralCustom.POWER,], for: service)*/
                     peripheral.discoverCharacteristics(nil, for: service)
                 }
             } else {
@@ -132,19 +125,10 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     
 
         func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-            print("Discover ch", service)
             if let characteristics = service.characteristics {
-                print("Characteristicsssss", characteristics)
                 for characteristic in characteristics {
                     print("Characteristic", characteristic)
-                   
-                    
                     self.ch = characteristic
-                    
-                    var parameter = "12345678"
-                    let data = NSData(bytes: &parameter, length: parameter.count)
-                    self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
-                    
                 }
             }
         }
@@ -155,73 +139,42 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
         if error != nil {
             print("Error write value", error!)
         } else {
-            print("Did write value", characteristic)
+            print("Did write value correctly")
         }
     }
  
-    private func senAccionToRemote( withCharacteristic characteristic: CBCharacteristic, withValue value: Data) {
+    private func senAccionToRemote(withValue value: [UInt8]) {
+        if self.peripheral != nil {
+            let token = "12345678"
+            let _data = NSData(bytes: token, length: token.count)
+            self.peripheral.writeValue(_data as Data, for: self.ch, type: .withResponse)
+            let data = NSData(bytes: value, length: value.count)
+            self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
+        }
+    }
 
-                // Check if it has the write property
-                if characteristic.properties.contains(.writeWithoutResponse) && peripheral != nil {
-
-                    //peripheral.writeValue(value, for: characteristic, type: .withoutResponse)
-                    //let data = NSData(bytes: value, length: 1)
-
-                    peripheral.writeValue(value, for: characteristic, type: .withResponse)
-                    
-                }
-
-        
-            }
-    
     @IBAction func powerAccion(_ sender: Any) {
-        
-//        senAccionToRemote(withCharacteristic: POWER!, withValue: peripheralCustom.POWER.data )
-        
-        let parameter = [0xFE, 0xA8, 0x57]
-        let data = NSData(bytes: parameter, length: parameter.count)
-        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
-        
+        senAccionToRemote(withValue: peripheralCustom.POWER)
     }
-    
+
     @IBAction func muteAccion(_ sender: Any) {
-        
-        let parameter = [0xFE, 0x68, 0x97]
-        let data = NSData(bytes: parameter, length: parameter.count)
-        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
-        
+        senAccionToRemote(withValue: peripheralCustom.MUTE)
     }
-    
+
     @IBAction func upVolAccion(_ sender: Any) {
-      print("Vol up")
-        //senAccionToRemote(withCharacteristic: VOLUME_DW!, withValue: peripheralCustom.VOLUME_DW.data )
-        let parameter = [0xFE, 0xD8, 0x27] // 0xFED827
-        let data = NSData(bytes: parameter, length: parameter.count)
-        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
+        senAccionToRemote(withValue: peripheralCustom.VOLUME_UP)
     }
-    
+
     @IBAction func dowVolAccion(_ sender: Any) {
-        
-        let parameter = [0xFE, 0x58, 0xA7]
-        let data = NSData(bytes: parameter, length: parameter.count)
-        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
-        
+        senAccionToRemote(withValue: peripheralCustom.VOLUME_DW)
     }
-    
+
     @IBAction func upchanelAccion(_ sender: Any) {
-        
-        let parameter = [0xFE, 0x98, 0x67]
-        let data = NSData(bytes: parameter, length: parameter.count)
-        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
-        
+        senAccionToRemote(withValue: peripheralCustom.CHANNEL_UP)
     }
-    
+
     @IBAction func dowchanelAccion(_ sender: Any) {
-        
-        let parameter = [0xFE, 0x18, 0xE7]
-        let data = NSData(bytes: parameter, length: parameter.count)
-        self.peripheral.writeValue(data as Data, for: self.ch, type: .withResponse)
-        
+        senAccionToRemote(withValue: peripheralCustom.CHANNEL_DW)
     }
 }
 
