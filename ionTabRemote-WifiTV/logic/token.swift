@@ -3,18 +3,18 @@
 //  ionTabRemote-WifiTV
 //
 //  Created by pablo Gutierrez on 8/7/21.
-// objeto encargado de recoger los token que se generan al registrarse en la api
+// object in charge of collecting the tokens that are generated when registering in the api
 
 import Foundation
 
 class token {
     
-    var credencialesO: credenciales = credenciales()
+    var credencialesO: credentialsOBJ = credentialsOBJ()
     var refresh_token : String
     var token : String
     
     
-    init(refresh_token : String, token : String, credencialesO: credenciales) {
+    init(refresh_token : String, token : String, credencialesO: credentialsOBJ) {
         self.refresh_token  = refresh_token
         self.token = token
         self.credencialesO = credencialesO
@@ -26,7 +26,7 @@ class token {
         
     }
     
-//    se encarga de renovar el token en el momento en el que se necesite hacerlo.
+//   is responsible for renewing the token at the time it needs to be done.
     
     func renove() -> Bool {
         

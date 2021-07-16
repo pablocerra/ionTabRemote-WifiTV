@@ -7,14 +7,14 @@
 
 import Foundation
 
-// objeto encargado de recoger los dato de la tv.
+// object in charge of collecting data from the tv.
 
 class configTV {
     
     var ble_token : String
     var ble_name : String
 
-//    inizalizador del objeto con parametros.
+//    object initializer with parameters.
 
     init(ble_token : String, ble_name : String) {
         self.ble_token  = ble_token
@@ -22,12 +22,12 @@ class configTV {
         
     }
     
-//    inicializador con los parametros en blaco.
+//    initializer with blank parameters.
     
     init(){
         
         self.ble_token  = "12345678"
-        self.ble_name = "WIFITV1234"//"WIFITV616"//"b4250400-fb4b-4746-b2b0-93f0e61122c6" WIFITV616
+        self.ble_name = "WIFITV1234"
         
     }
     

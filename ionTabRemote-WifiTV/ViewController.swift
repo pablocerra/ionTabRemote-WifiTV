@@ -8,6 +8,8 @@
 import UIKit
 import CoreBluetooth
 
+static var configuracionTV: configTV = configTV()
+
 class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDelegate {
    
     
@@ -21,7 +23,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     @IBOutlet weak var volumUpButton: UIButton!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private var configuracionTV: configTV!
+    
     private var mandoUID: CBUUID!
 
     private var centralManager: CBCentralManager!
@@ -56,7 +58,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
 
     }
      
-//    metodo encargado de realizar acciones cuando cambia el estado del Bluetooth., Si esta encendido, se buscara el dispoitivo que que tiene asigando a traves de un servicio.
+//    Method in charge of performing actions when the Bluetooth status changes. If it is on, it will search for the device that it has assigned through a service.
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         print("Central state update")
@@ -66,10 +68,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
           print("Central scanning");
         
             centralManager.scanForPeripherals(withServices: nil,options: nil)
-//            centralManager.scanForPeripherals(withServices: [mandoUID], options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
-            
-//            mandoUID = CBUUID.init(string: "A3EE8092-7BB9-0324-4D6B-BCD569E6644A")
-            
+
         }
 
             
@@ -77,14 +76,15 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
         
     }
 
-    // Busca el dispositivo
+    // Find the device
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
 
         print("Did discover peri", peripheral)
+        
         if peripheral.name == configuracionTV.ble_name {
+            
             print("Connect with", configuracionTV.ble_name)
-//            mandoUID = CBUUID.init(string: peripheral.identifier.uuidString)
             print(peripheral.identifier.uuidString)
             self.peripheral = peripheral
             self.peripheral.delegate = self
@@ -100,18 +100,20 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     // cuando el se conecta al dispositivo se lanza este metodo.
     
         func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-               if peripheral == self.peripheral {
-                   print("Connected and discover")
-                    
+           
+            if peripheral == self.peripheral {
+                
+                print("Connected and discover")
                 peripheral.discoverServices(nil)
                 
-               }
-           }
+            }
+        
+        }
     
     
 
     
-    // se encarga de gestionar los diferntes botones que tiene el mando.
+    // is in charge of managing the different buttons on the remote.
     
         func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
             if let services = peripheral.services {
@@ -126,14 +128,16 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
             }
         }
     
-    // se encarga de lanzar las peticiones al dispositivo.
+    // it is in charge of launching the requests to the device.
     
-
         func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
+            
             if let characteristics = service.characteristics {
                 for characteristic in characteristics {
+                
                     print("Characteristic", characteristic)
                     self.ch = characteristic
+                
                 }
             }
         }

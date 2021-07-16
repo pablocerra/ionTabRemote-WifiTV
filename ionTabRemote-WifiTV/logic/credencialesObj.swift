@@ -3,11 +3,11 @@
 //  ionTabRemote-WifiTV
 //
 //  Created by pablo Gutierrez on 8/7/21.
-//  Objeto que recoge todos los parametros necesarios para registarse en la api
+//  Object that collects all the necessary parameters to register in the api
 
 import Foundation
 
-class credenciales {
+class credentialsOBJ {
     
     let username : String
     let password : String

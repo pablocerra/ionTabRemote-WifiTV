@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ionTabRemote_WifiTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mando_nuevo-1" translatesAutoresizingMaskIntoConstraints="NO" id="uUS-c3-7VD">
-                                <rect key="frame" x="370" y="475.5" width="284" height="415"/>
+                                <rect key="frame" x="275" y="389.5" width="284" height="415"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="284" id="S5A-co-QfU"/>
                                     <constraint firstAttribute="height" constant="415" id="Vyz-MC-QGt"/>
@@ -28,28 +28,36 @@
                                 </constraints>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W3i-y8-BqY">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Mando" id="ozC-Hs-32n"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1. Encender y apagar TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-Ab-loX">
-                                <rect key="frame" x="43" y="233" width="236" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Encender y apagar TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-Ab-loX">
+                                <rect key="frame" x="88" y="239" width="236" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="3jO-8c-Z7r"/>
+                                    <constraint firstAttribute="width" secondItem="Dd3-Ab-loX" secondAttribute="height" multiplier="118:13" id="Nti-tu-iJB"/>
+                                    <constraint firstAttribute="width" constant="236" id="Rua-ym-Xm9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pulse el botón rojo y espere 15-20 segundos a que se encienda la TV. Pulse de nuevo si desea apagar la TV" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0Y-YX-Q37">
-                                <rect key="frame" x="43" y="221" width="355" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulse el botón rojo y espere 15-20 segundos a que se encienda la TV. Pulse de nuevo si desea apagar la TV" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0Y-YX-Q37">
+                                <rect key="frame" x="88" y="273" width="270" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="1n2-tm-2K8"/>
+                                    <constraint firstAttribute="width" secondItem="i0Y-YX-Q37" secondAttribute="height" multiplier="54:23" id="lMV-b3-bm2"/>
+                                    <constraint firstAttribute="height" constant="115" id="n4z-aq-uq2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pDR-lo-d0G">
-                                <rect key="frame" x="375" y="483" width="274" height="400"/>
+                                <rect key="frame" x="280" y="397" width="274" height="400"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgZ-Em-M4g">
                                         <rect key="frame" x="0.0" y="0.0" width="274" height="64"/>
@@ -328,14 +336,89 @@
                                     <constraint firstAttribute="width" constant="274" id="hoo-4W-p1h"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2. Silenciar sonido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nod-dK-PhF">
+                                <rect key="frame" x="486" y="270" width="180" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="86e-0b-3LA"/>
+                                    <constraint firstAttribute="width" constant="180" id="HFD-NM-U5r"/>
+                                    <constraint firstAttribute="width" secondItem="Nod-dK-PhF" secondAttribute="height" multiplier="90:13" id="dnd-7N-Q6u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" Pulse este botón si desea quitar el sonido totalmente" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqZ-yQ-Obq">
+                                <rect key="frame" x="486" y="288" width="254" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sqZ-yQ-Obq" secondAttribute="height" multiplier="254:75" id="5ow-Bu-357"/>
+                                    <constraint firstAttribute="width" constant="254" id="XxF-jU-waK"/>
+                                    <constraint firstAttribute="height" constant="75" id="gmo-Vk-kxu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Subir/bajar volumen " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAZ-wI-qpR">
+                                <rect key="frame" x="76" y="832" width="236" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="7Cq-K7-3ZM"/>
+                                    <constraint firstAttribute="height" constant="26" id="G6T-34-8CV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Con el botón de la derecha podrá subir el volumen y con el de la izquierda bajarlo" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFU-rU-b7C">
+                                <rect key="frame" x="76" y="861" width="270" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="ViD-2s-q4n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. Cambiar canal TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWq-kQ-GNW">
+                                <rect key="frame" x="510" y="831" width="236" height="25.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="pS2-Bq-EIY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los botones arriba ( + ) y abajo (- ) nos servirán para cambiar de canal cuando estemos viendo la televisión" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-dq-sk9">
+                                <rect key="frame" x="510" y="853" width="236" height="100.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nod-dK-PhF" secondAttribute="trailing" constant="208" id="2oH-Cj-2XW"/>
+                            <constraint firstItem="SAZ-wI-qpR" firstAttribute="leading" secondItem="iFU-rU-b7C" secondAttribute="leading" id="6Lh-wY-ui5"/>
+                            <constraint firstItem="i0Y-YX-Q37" firstAttribute="top" secondItem="Dd3-Ab-loX" secondAttribute="bottom" constant="8" id="Aar-iA-wlH"/>
                             <constraint firstItem="pDR-lo-d0G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ghy-Xl-agb"/>
+                            <constraint firstItem="nWq-kQ-GNW" firstAttribute="top" secondItem="uUS-c3-7VD" secondAttribute="bottom" constant="26.5" id="Gw5-1G-voh"/>
+                            <constraint firstItem="6Fm-dq-sk9" firstAttribute="top" secondItem="uUS-c3-7VD" secondAttribute="bottom" constant="48.5" id="Hgs-hR-PXb"/>
                             <constraint firstItem="uUS-c3-7VD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ItO-j8-w8x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Fm-dq-sk9" secondAttribute="bottom" constant="220.5" id="TlO-81-Q3p"/>
+                            <constraint firstItem="uUS-c3-7VD" firstAttribute="top" secondItem="Nod-dK-PhF" secondAttribute="bottom" constant="90.5" id="ZPk-uM-RAK"/>
+                            <constraint firstItem="nWq-kQ-GNW" firstAttribute="leading" secondItem="6Fm-dq-sk9" secondAttribute="leading" id="azz-hy-Cva"/>
+                            <constraint firstItem="i0Y-YX-Q37" firstAttribute="leading" secondItem="Dd3-Ab-loX" secondAttribute="leading" id="d1i-fl-CDW"/>
+                            <constraint firstItem="Nod-dK-PhF" firstAttribute="leading" secondItem="sqZ-yQ-Obq" secondAttribute="leading" id="doL-Xu-Xi0"/>
+                            <constraint firstItem="SAZ-wI-qpR" firstAttribute="top" secondItem="uUS-c3-7VD" secondAttribute="bottom" constant="27.5" id="e3l-B9-0IS"/>
+                            <constraint firstItem="uUS-c3-7VD" firstAttribute="top" secondItem="sqZ-yQ-Obq" secondAttribute="bottom" constant="23.5" id="hee-bJ-dEQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iFU-rU-b7C" secondAttribute="bottom" constant="241" id="lWr-Ur-cRj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nWq-kQ-GNW" secondAttribute="trailing" constant="88" id="mdA-JM-tRj"/>
                             <constraint firstItem="pDR-lo-d0G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n55-VT-L1p"/>
                             <constraint firstItem="uUS-c3-7VD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pSI-lf-KIo"/>
+                            <constraint firstItem="nWq-kQ-GNW" firstAttribute="trailing" secondItem="6Fm-dq-sk9" secondAttribute="trailing" id="qiE-Zt-BZN"/>
+                            <constraint firstItem="iFU-rU-b7C" firstAttribute="top" secondItem="SAZ-wI-qpR" secondAttribute="bottom" constant="3" id="sFN-bl-MpS"/>
+                            <constraint firstItem="SAZ-wI-qpR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="uMs-ek-3PJ"/>
+                            <constraint firstItem="Nod-dK-PhF" firstAttribute="top" secondItem="i0Y-YX-Q37" secondAttribute="top" id="ueI-3n-tri"/>
+                            <constraint firstItem="i0Y-YX-Q37" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="v57-bh-GBz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -349,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.26829268292683" y="88.47457627118645"/>
+            <point key="canvasLocation" x="28.057553956834536" y="87.939698492462313"/>
         </scene>
     </scenes>
     <resources>
