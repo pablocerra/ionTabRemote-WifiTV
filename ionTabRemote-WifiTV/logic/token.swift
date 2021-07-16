@@ -26,16 +26,7 @@ class token {
         
     }
     
-//   is responsible for renewing the token at the time it needs to be done.
-    
-    func renove() -> Bool {
-        
-        let renoveToken:String =  communicationsServer.postRefresh(username: credencialesO.username, password: credencialesO.password, mac: credencialesO.mac, bundleId: "es.ionide.WifiTV", version: "1", url: "es.ionide.WifiTV", tokenR: refresh_token)
-        
-        token = renoveToken
-        
-        return true
-    }
+
     
 }
     

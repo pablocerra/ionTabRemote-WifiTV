@@ -8,13 +8,10 @@
 import UIKit
 import CoreBluetooth
 
-static var configuracionTV: configTV = configTV()
+var configuracionTV: configTV = configTV()
 
 class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDelegate {
    
-    
-    
-
     @IBOutlet weak var PowerButton: UIButton!
     @IBOutlet weak var chanelUpButton: UIButton!
     @IBOutlet weak var chanelDownButton: UIButton!
@@ -31,8 +28,6 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     let heartRateServiceCBUUID = CBUUID(string: "0x180D")
     var ch: CBCharacteristic!
     
-
-    
     public var VOLUME_UP:CBCharacteristic?
     public var VOLUME_DW:CBCharacteristic?
 
@@ -42,10 +37,15 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     public var POWER:CBCharacteristic?
     public var MUTE :CBCharacteristic?
     
+    private var credencial = credentialsOBJ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        self.showSpiner(onView: self.view)
+    
         PowerButton.round()
         chanelUpButton.roundUPButton()
         chanelDownButton.roundDowButton()
@@ -53,7 +53,14 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
         muteButton.round()
         volumUpButton.roundUPButton()
         
-        configuracionTV  = appDelegate.configtv
+        
+        communicationsServer.petition(petition:"login",
+                                      credenciales: credencial)
+
+        self.removeSpinner()
+        
+        
+//        configuracionTV  = appDelegate.configtv
         centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
 
     }
@@ -70,6 +77,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
             centralManager.scanForPeripherals(withServices: nil,options: nil)
 
         }
+        
 
             
             
@@ -185,5 +193,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     @IBAction func dowchanelAccion(_ sender: Any) {
         senAccionToRemote(withValue: peripheralCustom.CHANNEL_DW)
     }
+
+
 }
 

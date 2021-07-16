@@ -41,8 +41,11 @@ class communicationsServer {
 
                     let json = try JSONDecoder().decode(dicConfig.self, from: data)
                                        
-                    configuracionTV.ble_name = json.ble_name
-                    configuracionTV.ble_token = json.ble_token
+//                    configuracionTV.ble_name = json.ble_name
+//                    configuracionTV.ble_token = json.ble_token
+                    
+                    configuracionTV.ble_name = "WIFITV1234"
+                    configuracionTV.ble_token = "12345678"
                     
                 } catch {
                     print(error)
